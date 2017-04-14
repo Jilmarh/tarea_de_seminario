@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	Array.prototype.eliminar = function(nombre){
+	var arreglo = this.filter(function(elemento){
+			return elemento != nombre;
+	});
+	for(var i = 0; i<=arreglo.length; i++){
+		this[i] = arreglo[i];
+		console.log(arreglo.length);
+	}
+	return this.pop();
+}
+
+var nombres = ['pedro','carlos', 'ana', 'juan','diego'];
+nombres.eliminar('diego');
+console.log(nombres);
+
+</script>
+
+</body>
+</html>
